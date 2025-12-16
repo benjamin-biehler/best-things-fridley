@@ -30,28 +30,30 @@
 
     
         <button onclick="yesClicked()">Yes</button>
-        <div id="yesText" class="response"></div>
-    
-
     
         <button onclick="noClicked()">No</button>
         <div id="noText" class="response"></div>
     
 
-    <audio id="noAudio" src="/EminemSingForTheMoment.mp3"></audio>
+    <audio id="noAudio" src="coconutmall.mp3" preload="auto"></audio>
 
     <script>
         function yesClicked() {
-            document.getElementById("yesText").textContent = "Leave!";
+            const audio = document.getElementById("noAudio");
+            audio.play();
+
+            setTimeout(() => {
+                document.getElementById("noText").textContent = "you just got coconut malled";
+            }, 3000);
         }
 
         function noClicked() {
             const audio = document.getElementById("noAudio");
             audio.play();
 
-            setTimeout(() => {
-                document.getElementById("noText").textContent = "Leave!";
-            }, 3000);
+            
+            document.getElementById("noText").textContent = "you just got coconut malled";
+            
         }
     </script>
 
