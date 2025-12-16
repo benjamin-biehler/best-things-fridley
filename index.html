@@ -26,23 +26,23 @@
 </head>
 <body>
 
-    <h1>Do you like this page?</h1>
+    <h1>Would you like to know the best things to do in Fridley?</h1>
 
-    <div>
+    
         <button onclick="yesClicked()">Yes</button>
         <div id="yesText" class="response"></div>
-    </div>
+    
 
-    <div>
+    
         <button onclick="noClicked()">No</button>
         <div id="noText" class="response"></div>
-    </div>
+    
 
-    <audio id="noAudio" src="no-sound.mp3"></audio>
+    <audio id="noAudio" src="EminemSingForTheMoment.mp3"></audio>
 
     <script>
         function yesClicked() {
-            document.getElementById("yesText").textContent = "Nice 😄";
+            document.getElementById("yesText").textContent = "Leave!";
         }
 
         function noClicked() {
@@ -50,7 +50,7 @@
             audio.play();
 
             setTimeout(() => {
-                document.getElementById("noText").textContent = "Well… that’s awkward 😅";
+                document.getElementById("noText").textContent = "Leave!";
             }, 3000);
         }
     </script>
