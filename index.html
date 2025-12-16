@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yes or No</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .response {
+            margin-top: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Do you like this page?</h1>
+
+    <div>
+        <button onclick="yesClicked()">Yes</button>
+        <div id="yesText" class="response"></div>
+    </div>
+
+    <div>
+        <button onclick="noClicked()">No</button>
+        <div id="noText" class="response"></div>
+    </div>
+
+    <audio id="noAudio" src="no-sound.mp3"></audio>
+
+    <script>
+        function yesClicked() {
+            document.getElementById("yesText").textContent = "Nice 😄";
+        }
+
+        function noClicked() {
+            const audio = document.getElementById("noAudio");
+            audio.play();
+
+            setTimeout(() => {
+                document.getElementById("noText").textContent = "Well… that’s awkward 😅";
+            }, 3000);
+        }
+    </script>
+
+</body>
+</html>
